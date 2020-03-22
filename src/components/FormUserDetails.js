@@ -12,6 +12,11 @@ export class FormUserDetails extends Component {
         this.props.nextStep()
     }
 
+    back = e => {
+        e.preventDefault()
+        this.props.prevStep()
+    }
+
     render() {
         const {values, handleChange} = this.props
         return (
