@@ -22,7 +22,7 @@ export class FormPersonalDetails extends Component {
         return (
             <MuiThemeProvider>
                 <>
-                    <AppBar title={'Hello form user details'} />
+                    <AppBar title={'Hello form user details'}/>
                     <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
                         <TextField
                             hintText={"Enter your occupation"}
@@ -42,24 +42,27 @@ export class FormPersonalDetails extends Component {
                             onChange={handleChange('bio')}
                             defaultValue={values.bio}
                         />
-                        <RaisedButton
-                            label={"Continue"}
-                            primary={true}
-                            style={styles.button}
-                            onClick={this.continue}
-                        />
-                        <RaisedButton
-                            label={"Back"}
-                            primary={false}
-                            style={styles.button}
-                            onClick={this.back}
-                        />
+                        <div>
+                            <RaisedButton
+                                label={"Back"}
+                                primary={false}
+                                style={styles.button}
+                                onClick={this.back}
+                            />
+                            <RaisedButton
+                                label={"Continue"}
+                                primary={true}
+                                style={styles.button}
+                                onClick={this.continue}
+                            />
+                        </div>
                     </div>
                 </>
             </MuiThemeProvider>
         )
     }
 }
+
 const styles = {
     button: {
         margin: 15
