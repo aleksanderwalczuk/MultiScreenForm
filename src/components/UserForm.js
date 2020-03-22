@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 import FormUserDetails from "./FormUserDetails";
+import FromPersonalDetails from "./FromPersonalDetails";
 
-export class UserForm extends Component{
+export class UserForm extends Component {
     state = {
         //step defines stage of filling the form
         step: 1,
@@ -40,20 +41,26 @@ export class UserForm extends Component{
         const {step} = this.state
         //following state values will be copied to values obj so they can be rendered in the inputs
         const {firstName, lastName, email, occupation, city, bio} = this.state
-        const values =  {firstName, lastName, email, occupation, city, bio}
+        const values = {firstName, lastName, email, occupation, city, bio}
 
         switch (step) {
             case 1:
-                return(
+                return (
                     <FormUserDetails
                         nextStep={this.nextStep}
-                        prevStep = {this.prevStep}
+                        prevStep={this.prevStep}
                         handleChange={this.handleChange}
                         values={values}
                     />
                 )
             case 2:
-                return <h1>FormPersonalDetails</h1>
+                return (
+                    <FromPersonalDetails
+                        nextStep={this.nextStep}
+                        prevStep={this.prevStep}
+                        handleChange={this.handleChange}
+                        values={values}
+                    />)
             case 3:
                 return <h1>Confirm</h1>
             case 4:
