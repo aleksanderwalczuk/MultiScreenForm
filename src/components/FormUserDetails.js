@@ -8,13 +8,7 @@ export class FormUserDetails extends Component {
 
     continue = e => {
         e.preventDefault()
-        console.log(this.props.nextStep())
         this.props.nextStep()
-    }
-
-    back = e => {
-        e.preventDefault()
-        this.props.prevStep()
     }
 
     render() {
