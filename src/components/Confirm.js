@@ -23,7 +23,7 @@ export class Confirm extends Component {
         return (
             <MuiThemeProvider>
                 <>
-                    <AppBar title={'Hello form user details'}/>
+                    <AppBar title={'Confirm Your Data'}/>
                     <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
                         <List>
                             <ListItem

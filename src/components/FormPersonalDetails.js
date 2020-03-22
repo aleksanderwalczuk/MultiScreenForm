@@ -22,7 +22,7 @@ export class FormPersonalDetails extends Component {
         return (
             <MuiThemeProvider>
                 <>
-                    <AppBar title={'Enter user details'} />
+                    <AppBar title={'Enter User Details'} />
                     <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
                         <TextField
                             hintText={"Enter your occupation"}

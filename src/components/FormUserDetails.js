@@ -16,7 +16,7 @@ export class FormUserDetails extends Component {
         return (
             <MuiThemeProvider>
                 <>
-                    <AppBar title={'Hello form user details'} />
+                    <AppBar title={'Enter Your Data'} />
                     <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
                         <TextField
                             hintText={"Enter your first name"}
